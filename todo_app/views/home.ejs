@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <div id="main_container">
+    <h1>Todo List</h1>
+    <form action="/create" method="post" id="form">
+      <div id="description">
+        <p>Description</p>
+        <input type="text" placeholder="What do you need to do?" name="task" />
+      </div>
+      <div id="info">
+        <div id="category">
+          <p>Category</p>
+          <select
+            name="type"
+            id="type"
+            style="
+              border: 0px;
+              font-size: 1.5rem;
+              color: gray;
+              width: 90%;
+              padding-left: 10px;
+              box-sizing: border-box;
+            "
+            name="type"
+          >
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div id="date">
+          <p>Due Date</p>
+          <input type="date" name="date" />
+        </div>
+      </div>
+
+      <div id="add_task">
+        <button type="submit" id="submit_button">
+          <i class="fa-solid fa-plus"></i>
+          Add Task
+        </button>
+      </div>
+    </form>
+
+    <ul id="show_task">
+      <%for (let i = 0; i < task.length; i++ ){%>
+      <li class="task"  >
+        <p class="task_para">
+          <span class="helper">
+          <!-- <input
+              type="checkbox"
+              class="check_box"
+            /> -->
+            <i class="fa-sharp fa-solid fa-list-check" style="color: green;"></i>
+            &nbsp;<span class="tick"><%=task[i].task%></span>   
+            </span>
+          <span class="task_para_type"><%=task[i].type%></span>
+          <span class="dltbtn" ><a href="/delete/?id=<%=task[i]._id%>"><i class="fa-solid fa-trash" id="tr"></i></a></span>
+        </p>
+        <p class="task_para_date"><i class="fa-solid fa-calendar-days"></i>&nbsp;<%=task[i].date%></p>
+      </li>
+      <%}%>
+    </ul>
+  </div>
+    <script src="/js/home.js"></script>
+  </body>
+</html>
