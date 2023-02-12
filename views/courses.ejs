@@ -1,0 +1,40 @@
+<h1 class="text-center mt-5 mb-5" style="color: blue">Premium Courses</h1>
+
+<div class="courses d-flex flex-wrap justify-content-around">
+  <%for(let i = 0; i < premium_course.length; i++){%>
+  <div class="card" style="width: 22rem">
+    <img class="card-img-top" src="<%=premium_course[i].image%>" alt="Card image cap" class="w-100"/>
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">Free Course</h6>
+      <h5 class="card-title"><%=premium_course[i].title%></h5>
+      <p class="card-text">
+         <%=premium_course[i].description%>
+      </p>
+      <a href="<%=premium_course[i].link%>" class="btn btn-primary">Start Watching</a>
+    </div>
+    </div>
+  <%}%>
+</div>
+
+
+<!-- more courses -->
+
+
+
+<h1 class="text-center mt-5 mb-5" style="color: blue">More Courses</h1>
+<div class="courses d-flex flex-wrap justify-content-around">
+  <%for(let i = 0; i < course.length; i++){%>
+  <div class="card" style="width: 22rem">
+    <img class="card-img-top" src="<%=course[i].image%>" alt="Card image cap" class="w-100"/>
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">Free Course</h6>
+      <h5 class="card-title"><%=course[i].title%></h5>
+      <p class="card-text">
+        <%=course[i].description%>
+      </p>
+      <a href="<%=course[i].link%>" class="btn btn-primary">Start Watching</a>
+    </div>
+    </div>
+  <%}%>
+  </div>
+

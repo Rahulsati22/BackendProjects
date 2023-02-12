@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const homeController = require('../homeController/func');
+router.get('/',homeController.home);
+router.get('/notes',homeController.notes);
+router.get('/contactUs',homeController.contactUs);
+router.get('/work', homeController.work);
+router.get('/course',homeController.course);
+router.post('/submit',homeController.submit);
+module.exports = router;
