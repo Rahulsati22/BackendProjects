@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Blog</title>
+  </head>
+  <body>
+    <form style="height: 50vh;" action="/articles/blog_edit/<%=articles.id%>" method ="post">
+        <h1 class="mb-4 ml-4">New Article</h1>
+        <div class="form-group ml-4">
+            <label for="exampleInputPassword1">Title</label>
+            <input type="text" value="<%=articles.title%>" class="form-control w-50"  name = "title" id="exampleInputPassword1">
+        </div>
+        <div class="form-group ml-4 h-25">
+          <label for="exampleInputPassword1">Description</label>
+          <br>
+         <textarea name="description"  id="" class="w-50 h-75 form-control" cols="30" rows="10"><%=articles.description%></textarea>
+        </div>
+        <div class="form-group ml-4 h-50 mt-2">
+          <label for="exampleInputPassword1">MarkDown</label>
+          <br>
+          <textarea name="content" class="h-75 w-50 form-control" id="" cols="30" rows="10"><%=articles.content%></textarea>
+        </div>
+        <button class="btn btn-secondary ml-4">Cancel</button>
+        <button type="submit" class="btn btn-success ml-4">Save</button>
+      </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
