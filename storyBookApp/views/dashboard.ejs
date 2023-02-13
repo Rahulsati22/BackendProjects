@@ -1,0 +1,33 @@
+<%-include('header')%>
+<div class="container">
+  <h1 style="margin-top: 1rem; text-decoration: underline" class="text-danger">
+    <%=locals.user.name.charAt(0).toUpperCase() + locals.user.name.slice(1)%>'s DashBoard
+  </h1>
+  <div class="row">
+    <%for (let i = 0; i < stories.length; i++){%>
+    <div class="col-md-4 my-5">
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="https://kidsmandi.com/wp-content/uploads/2023/01/BestBooks.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted"><%=stories[i].status%></h6>
+          <h6 class="card-subtitle mb-2 text-muted">
+            <%=stories[i].createdAt.getDate()%>/<%=stories[i].createdAt.getMonth()%>/<%=stories[i].createdAt.getFullYear()%>
+          </h6>
+          <h5 class="card-title"><%=stories[i].title%></h5>
+          <p class="card-text">
+            <%=stories[i].description.substring(0,30)%>...
+          </p>
+          <a href="/readMore/?id=<%=stories[i]._id%>" class="btn btn-danger mr-5">Read More</a>
+          <a href="/update/?id=<%=stories[i]._id%>" class="btn btn-danger"
+            >Update</a
+          >
+        </div>
+      </div>
+    </div>
+    <%}%>
+  </div>
+</div>

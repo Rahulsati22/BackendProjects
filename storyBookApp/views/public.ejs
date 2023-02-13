@@ -1,0 +1,29 @@
+<%-include('header')%>
+<div class="container">
+  <h1 style="margin-top: 1rem; text-decoration: underline" class="text-danger">
+    Public stories
+  </h1>
+  <div class="row">
+    <%for (let i = 0; i < story.length; i++){%> <%if(story[i].user !=
+    locals.user.id && story[i].status === 'public'){%>
+    <div class="col-md-4 my-5">
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="https://kidsmandi.com/wp-content/uploads/2023/01/BestBooks.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted"><%=story[i].status%></h6>
+          <h6 class="card-subtitle mb-2 text-muted">
+            <%=story[i].createdAt.getDate()%>/<%=story[i].createdAt.getMonth()%>/<%=story[i].createdAt.getFullYear()%>
+          </h6>
+          <h5 class="card-title"><%=story[i].title%></h5>
+          <p class="card-text"><%=story[i].description.substring(0,30)%>...</p>
+          <a href="/readMore/?id=<%=story[i]._id%>" class="btn btn-danger mr-5">Read More</a>
+        </div>
+      </div>
+    </div>
+    <%}%> <%}%>
+  </div>
+</div>

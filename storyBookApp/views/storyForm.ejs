@@ -1,0 +1,22 @@
+<%-include('header')%>
+<h1 class="my-2 text-danger" style="text-align: center;"><i class="fa-solid fa-book-open-reader"></i>&nbsp;Add Story</h1>
+<div class="container my-3">
+<form method="post" action="/putStory">
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="text-danger">Title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name="title">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1" class="text-danger">Status</label>
+    <select class="form-control" name="status" id="exampleFormControlSelect1">
+      <option>public</option>
+      <option>private</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1" class="text-danger">Description</label>
+    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+</div>
