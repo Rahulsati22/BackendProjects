@@ -1,0 +1,18 @@
+<h1 class="mt-5 text-success mx-5">Latest Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i < Math.min(latest.length,10); i++){%>
+  <a
+    class="col-lg-2 rounded mx-3"
+    href="/recipe/<%=latest[i]._id%>"
+
+    style="height: 18rem; overflow: hidden; cursor: pointer;text-decoration: none;"
+  >
+    <img
+      src="<%=latest[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=latest[i].name%></p>
+  </a>
+<%}%>
+</div>

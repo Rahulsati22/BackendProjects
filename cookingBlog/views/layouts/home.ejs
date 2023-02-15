@@ -1,0 +1,232 @@
+<!-- this is the header start -->
+<div class="row my-5">
+  <div class="col-md-7">
+    <h1 class="main_heading mx-2 text-success">
+      Huge Selection of delicious recipe ideas
+    </h1>
+    <p class="mx-2 main_para my-3">
+      Explore our huge selection of delicious recipe ideas including easy
+      deserts, delicious vegan and vegetarian dinner ideas ,gorgeous pasta
+      recipes, quick bakes, family-friendly meals and gluten-free recipes.
+    </p>
+    <button class="btn btn-dark mx-2 my-3 text-white"><a href="/getLatest" style="text-decoration: none;" class="text-white">Explore Latest</a></button>
+    <button class="btn btn-light my-3" style="border: 1px solid">
+      <a href="/getRandom" style="text-decoration: none;" class="text-dark">Explore Random</a>
+    </button>
+  </div>
+  <div class="col-md-5 mimg">
+    <img
+      src="./img/burger_img.png"
+      class="mx-md-5"
+      alt=""
+      style="height: 60vh"
+    />
+  </div>
+</div>
+<!-- this is the header end -->
+
+<!-- this is categories start -->
+
+<div class="row mx-2 my-2" >
+  <%for (let i = 0; i < 5; i++){%>
+  <div
+    class="col-lg-2   rounded"
+    style="height: 14rem; overflow: hidden; cursor: pointer"
+    id="categories"
+  >
+    <img
+      src="<%=category[i].image%>"
+      alt=""
+      class="cate"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=category[i].name%></p>
+  </div>
+  <%}%>
+  <a href="/categories"
+    class="col-lg-2 rounded"
+    style="height: 14rem; overflow: hidden; cursor: pointer"
+    id="categories"
+  >
+    <img
+      src="https://images.pexels.com/photos/15283480/pexels-photo-15283480.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+      alt=""
+      class="cate"
+      style="opacity: 0.7"
+    />
+    <p style="text-align: center" class="my-3">View All</p>
+  </a>
+</div>
+
+<!-- this is categories end -->
+
+<!-- latest recipes start -->
+<h1 class="my-3 text-success mx-5">Latest Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i < 5; i++){%>
+  <a
+    class="col-lg-2 rounded mx-3"
+    style="height: 18rem; overflow: hidden; cursor: pointer; text-decoration:none"
+    href="/recipe/<%=recipee[i]._id%>"
+   
+  >
+    <img
+      src="<%=recipee[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=recipee[i].name%></p>
+  </a>
+<%}%>
+</div>
+<!-- latest recipes end -->
+
+
+
+<!-- thai recipe starts -->
+<h1 class="mt-5 text-success mx-5">Thai Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i < Math.min(thai.length,5); i++){%>
+  <a
+    class="col-lg-2 rounded mx-3"
+    href="/recipe/<%=thai[i]._id%>"
+
+    style="height: 18rem; overflow: hidden; cursor: pointer;text-decoration: none;"
+  >
+    <img
+      src="<%=thai[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=thai[i].name%></p>
+  </a>
+<%}%>
+</div>
+<!-- thai recipe ends -->
+
+
+<!-- Indian recipe starts  -->
+<h1 class="mt-5 text-success mx-5">Indian Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i < Math.min(indian.length,5); i++){%>
+  <a
+    class="col-lg-2 rounded mx-3"
+    href="/recipe/<%=indian[i]._id%>"
+    style="height: 18rem; overflow: hidden; cursor: pointer;text-decoration: none;"
+  >
+    <img
+      src="<%=indian[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=indian[i].name%></p>
+  </a>
+<%}%>
+</div>
+<!-- Indian recipe ends  -->
+
+
+<!-- Chinese recipe starts  -->
+<h1 class="mt-5 text-success mx-5">Chinese Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i < Math.min(chinese.length,5); i++){%>
+  <a
+    class="col-lg-2 rounded mx-3"
+    href="/recipe/<%=chinese[i]._id%>"
+    style="height: 18rem; overflow: hidden; cursor: pointer;text-decoration: none;"
+  >
+    <img
+      src="<%=chinese[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=chinese[i].name%></p>
+  </a>
+<%}%>
+</div>
+<!-- Chinese recipe ends -->
+
+
+
+
+<!-- Mexican recipe starts  -->
+<h1 class="mt-5 text-success mx-5">Mexican Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i < Math.min(mexican.length,5); i++){%>
+  <a
+  href="/recipe/<%=mexican[i]._id%>"
+    class="col-lg-2 rounded mx-3"
+    style="height: 18rem; overflow: hidden; cursor: pointer;text-decoration: none;"
+  >
+    <img
+      src="<%=mexican[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=mexican[i].name%></p>
+  </a>
+<%}%>
+</div>
+<!-- Mexican recipe end  -->
+
+
+
+
+
+
+<!-- American recipe starts-->
+<h1 class="mt-5 text-success mx-5">American Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i <  Math.min(american.length,5); i++){%>
+  <a
+    class="col-lg-2 rounded mx-3"
+    href="/recipe/<%=american[i]._id%>"
+    style="height: 18rem; overflow: hidden; cursor: pointer;text-decoration: none;"
+  >
+    <img
+      src="<%=american[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=american[i].name%></p>
+  </a>
+<%}%>
+</div>
+<!-- American recipe ends-->
+
+
+
+<!-- submit section start  -->
+<div class="submitRecipe">
+  <div class="images mt-5">
+    <img
+      src="https://media.istockphoto.com/id/996097046/photo/cute-joyful-couple-cooking-together-and-adding-spice-to-meal-laughing-and-spending-time.jpg?s=612x612&w=0&k=20&c=NPLI6ev_75tAAhAV53N75Lx8mDkSYpaKtG1yKQ1oCqQ="
+      alt=""
+      style="height: 10rem; overflow: hidden; border-radius: 50%"
+      class="mx-5"
+    />
+    <img
+      src="https://img.freepik.com/free-photo/young-couple-cooking-home_23-2148869614.jpg?w=2000"
+      alt=""
+      style="height: 10rem; overflow: hidden; border-radius: 50%"
+      class="mx-5"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1556909115-3f381036bcb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y291cGxlJTIwY29va2luZ3xlbnwwfHwwfHw%3D&w=1000&q=80"
+      alt=""
+      style="height: 10rem; overflow: hidden; border-radius: 50%"
+      class="mx-5"
+    />
+  </div>
+  <div class="About">
+    <h1 class="main_heading mx-2 text-success">
+      Submit your recipe for free today
+    </h1>
+    <p class="mx-2 main_para my-3">
+      Publish Your recipe in front of thousands of people for free
+    </p>
+    <a class="btn btn-success" href="/submit">Submit Your Recipe</a>
+  </div>
+</div>
+<!-- submit section end -->
+
+

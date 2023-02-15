@@ -1,0 +1,24 @@
+<p class="my-3 text-success mx-4" style="font-weight: 400;font-size: 1.2rem;"><%=recipee.name%>'s Recipe</>
+<div class="row mx-2 my-3">
+    <div class="col-md-6">
+        <img src="<%=recipee.image%>" alt="" style="height: 75vh;width: 70%;border-radius: 20px;overflow: hidden;">
+    </div>
+    <div class="col-md-6">
+        <h1 class="my-3 text-success" style="font-weight: 700;"><%=recipee.name%>'s Recipe</h1>
+        <p style="color: gray;font-weight: 600;"><i class="fa-solid fa-tags" style="color: green;"></i>&nbsp;<%=recipee.category%></p>
+
+        <div class="cookingInstructions mt-4 mb-4">
+            <h3 class="mb-3 text-success">Cooking Instructions</h3>
+            <p style="font-weight: 600;"><%=recipee.description%></p>
+        </div>
+
+        <div class="cookingIngredients mt-4 mb-4">
+            <h3 class="mb-3 text-success">Ingredients</h3>
+            <ul>
+               <%for(let i = 0; i < recipee.ingredients.length; i++){%>
+                <li style="font-weight: 600;"><%=recipee.ingredients[i]%></li>
+               <%}%>
+            </ul>
+        </div>
+    </div>
+</div>

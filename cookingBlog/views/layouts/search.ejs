@@ -1,0 +1,18 @@
+<h1 class="mt-5 text-success mx-5">Searched Recipes</h1>
+<div class="row mx-3 my-2">
+  <%for(let i = 0; i < recipe.length; i++){%>
+  <a
+    class="col-lg-2 rounded mx-3"
+    href="/recipe/<%=recipe[i]._id%>"
+
+    style="height: 18rem; overflow: hidden; cursor: pointer;text-decoration: none;"
+  >
+    <img
+      src="<%=recipe[i].image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=recipe[i].name%></p>
+  </a>
+<%}%>
+</div>

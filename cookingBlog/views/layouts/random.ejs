@@ -1,0 +1,16 @@
+<h1 class="my-3 text-success mx-5">Random Recipe</h1>
+<div class="row mx-3 my-2">
+  <a
+    class="col-lg-2 rounded mx-3"
+    style="height: 18rem; overflow: hidden; cursor: pointer; text-decoration:none"
+    href="/recipe/<%=randomRecipe._id%>"
+   
+  >
+    <img
+      src="<%=randomRecipe.image%>"
+      alt=""
+      class="cate2"
+    />
+    <p style="text-align: center" class="my-3 text-success"><%=randomRecipe.name%></p>
+  </a>
+</div>

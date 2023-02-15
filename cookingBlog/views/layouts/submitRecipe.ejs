@@ -1,0 +1,85 @@
+<h1 class="mt-3 text-success mx-5 text-center">
+  <img
+    src="https://media.istockphoto.com/id/1166149111/vector/chef-in-a-cooking-hat-vector-outline-icon-food-concept-for-graphic-design-logo-web-site.jpg?s=612x612&w=0&k=20&c=ars2r_Y6s5OSSLHymV6MAvhxokUDqxSaxDK36ibhjgk="
+    style="width: 5rem; height: 5rem"
+  />
+  Submit Recipe
+</h1>
+<p class="mt-1 mb-3 mx-5 text-center">Share your amazing recipes with thousands of web developers across the world. Fill our form to get started</p>
+<form class="container" method="post" action="/addRecipe">
+  <div class="form-group">
+    <label for="exampleFormControlInput1" class="text-success">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="abc xyz"
+      name="name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1" class="text-success">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+      name="email"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1" class="text-success">Category</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="category">
+      <option>Thai</option>
+      <option>Indian</option>
+      <option>Chinese</option>
+      <option>Mexican</option>
+      <option>American</option>
+    </select>
+  </div>
+
+  <div class="form-group" id="main_submit">
+    <label for="exampleFormControlTextarea1" class="text-success"
+      >Ingredients</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      class="ingredient_list"
+      placeholder="ingredient name"
+      style="margin-top: 5px;"
+      name="ingredients"
+    />
+    
+  </div>
+  <button type="button" class="btn btn-primary mb-2" id="ingredientButton"> +Ingredients</button>
+
+  <div class="form-group mt-3">
+    <label for="exampleFormControlTextarea1" class="text-success"
+      >Image Link</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="choose image link from pinterest"
+      name="image"
+    />
+  </div>
+
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1" class="text-success"
+      >Description</label
+    >
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      name="description"
+    ></textarea>
+  </div>
+
+  <button class="btn btn-success" type="submit">Submit</button>
+</form>
