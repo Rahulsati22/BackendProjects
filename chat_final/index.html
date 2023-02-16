@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Chat Application</title>
+    <style>
+      .main_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(white, rgb(134, 134, 230));
+        flex-direction: column;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        height: 80vh;
+        width: 80vw;
+        overflow: scroll;
+        border: 2px solid violet;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 2rem;
+        /* display: flex;
+            flex-direction: column; */
+      }
+      .form {
+        width: 90%;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      .left {
+        float: left;
+        width: 30%;
+        clear: both;
+        padding: 1rem;
+        background-color: aliceblue;
+        border: 1px solid white;
+        border-radius: 7px;
+        margin-top: 1rem;
+      }
+      .right {
+        float: right;
+        width: 30%;
+        clear: both;
+        padding: 1rem;
+        background-color: greenyellow;
+        border-radius: 1px solid white;
+        border-radius: 7px;
+        margin-top: 1rem;
+      }
+      i:hover {
+        color: greenyellow;
+        cursor: pointer;
+      }
+      button {
+        background-color: blueviolet;
+        height: 2rem;
+        width: 4rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container" style="width: 100vw; height: 100vh">
+      <h1 style="text-align: center; color: blue">
+        <i class="fa-brands fa-whatsapp"></i>&nbsp;Chat Application
+      </h1>
+      <div class="container">
+         
+         
+       
+      </div>
+       
+        <input
+          type="text"
+          style="width: 70%; height: 2rem; border-radius: 10px; margin-top: 5px;padding-left: 10px;"
+          id="input_container"
+        />
+        
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
